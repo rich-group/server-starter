@@ -1,0 +1,85 @@
+{
+  "name": "{{ name }}",
+  "version": "0.0.1",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
+  "main": "./src/index.ts",
+  "exports": "./dist/index.js",
+  "scripts": {
+    "start": "node bin/www",
+    "dev": "npm run start --env=dev",
+    "dev:sit": "npm run start --env=sit",
+    "dev:pre": "npm run start --env=pre",
+    "dev:prd": "npm run start --env=prd",
+    "build": "tsc -p tsconfig.json",
+    "serve": "pm2 start ecosystem.config.js",
+    "serve:sit": "pm2 start ecosystem.config.js --env sit",
+    "serve:pre": "pm2 start ecosystem.config.js --env pre",
+    "serve:prd": "pm2 start ecosystem.config.js --env prd"
+  },
+  "keywords": [
+    "typescript",
+    "node",
+    "ts-node",
+    "esm",
+    "koa"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    {{#if_eq server "express"}}
+    "@types/cors": "^2.8.12",
+    {{/if_eq}}
+    "@types/esprima": "^4.0.3",
+    {{#if_eq server "koa"}}
+    "@types/koa__cors": "^3.3.0",
+    "@types/koa__router": "^8.0.11",
+    "@types/koa-router": "^7.4.4",
+    {{/if_eq}}
+    "@types/node": "^18.0.6",
+    "@types/validator": "^13.7.4",
+    "@types/webpack-env": "^1.17.0",
+    "chalk": "^5.0.1",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "tsc-watch": "^4.6.2",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    {{#if_eq server "koa"}}
+    "@koa/cors": "^3.3.0",
+    "@koa/router": "^10.1.1",
+    "@types/koa": "^2.13.4",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "koa-cors": "^0.0.16",
+    "koa-router": "^10.1.1",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
+    {{/if_eq}}
+    {{#if_eq server "express"}}
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    {{/if_eq}}
+    "@babel/register": "^7.18.9",
+    "esprima": "^4.0.1",
+    "moment": "^2.29.4",
+    "node-schedule": "^2.1.0",
+    "reflect-metadata": "^0.1.13",
+    {{#if_eq orm "sequelize"}}
+    "sequelize": "^6.21.3",
+    "sequelize-typescript": "^2.1.3",
+    {{/if_eq}}
+    "reflect-metadata": "^0.1.13",
+    {{#if_eq orm "typeorm"}}
+    "typeorm": "^0.3.6",
+    {{/if_eq}}
+    "mysql2": "^2.3.3"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  }
+}

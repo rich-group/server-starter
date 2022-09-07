@@ -1,0 +1,7 @@
+{ 
+  "name": "template",
+  "description": "A server project",
+  "router": false,
+  "lint": true,
+  "ts": false
+}
