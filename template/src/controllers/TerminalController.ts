@@ -1,7 +1,7 @@
 import BaseController from "./BaseController";
-import { Controller, Get } from '../middleware/request'
-import { ResultStatus } from "../utils/ResultStatus";
-import { TerminalModel } from "../domain";
+import { Controller, Get } from '@/middleware/request'
+import { ResultStatus } from "@/utils/ResultStatus";
+import { TerminalModel } from "@/domain";
 
 @Controller('/terminal')
 export default class TerminalController extends BaseController {

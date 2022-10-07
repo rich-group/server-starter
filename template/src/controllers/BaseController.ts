@@ -1,4 +1,4 @@
-import { Result, ResultStatus, ResultMessage } from '../utils/ResultStatus'
+import { Result, ResultStatus, ResultMessage } from '@/utils/ResultStatus'
 
 export default class BaseController {
   JsonBackResult(status: ResultStatus): Result;

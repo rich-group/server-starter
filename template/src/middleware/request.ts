@@ -1,5 +1,4 @@
 import { HttpMethod, Param, Parse } from '../utils/route';
-import 'reflect-metadata'
 
 export const CONTROLLER_METADATA = 'controller';
 export const ROUTE_METADATA = 'method';

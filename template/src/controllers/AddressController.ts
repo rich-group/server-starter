@@ -1,8 +1,8 @@
 import BaseController from "./BaseController";
-import { AddressModel } from '../domain'
-import { ResultStatus } from "../utils/ResultStatus";
-import { Controller, Get, Query, Post, Body, Delete } from '../middleware/request'
-import { SiteModel, SceneModel } from '../application'
+import { AddressModel } from '@/domain'
+import { ResultStatus } from "@/utils/ResultStatus";
+import { Controller, Get, Query, Post, Body, Delete } from '@/middleware/request'
+import { SiteModel, SceneModel } from '@/application'
 
 @Controller('/address')
 export default class AddressController extends BaseController {

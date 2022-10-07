@@ -17,6 +17,9 @@
     "serve:pre": "pm2 start ecosystem.config.js --env pre",
     "serve:prd": "pm2 start ecosystem.config.js --env prd"
   },
+  "_moduleAliases": {
+    "@": "src"
+  },
   "keywords": [
     "typescript",
     "node",
@@ -42,6 +45,8 @@
     "@types/webpack-env": "^1.17.0",
     "chalk": "^5.0.1",
     "cross-env": "^7.0.3",
+    "module-alias": "^2.2.2",
+    "shelljs": "^0.8.5",
     "nodemon": "^2.0.15",
     "ts-node": "^10.7.0",
     "tsc-watch": "^4.6.2",
@@ -76,7 +81,9 @@
     {{#if_eq orm "typeorm"}}
     "typeorm": "^0.3.6",
     {{/if_eq}}
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "winston": "^3.8.2",
+    "winston-daily-rotate-file": "^4.7.1"
   },
   "engines": {
     "node": ">= 6.0.0",
