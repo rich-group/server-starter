@@ -1,12 +1,6 @@
 import { Sequelize } from 'sequelize-typescript'
-import BaseController from '../../controllers/BaseController'
-import AddressModel from './models/AddressModel'
-import ErrorModel from './models/ErrorModel'
-import PerformanceModel from './models/PerformanceModel'
-import ScreenModel from './models/ScreenModel'
-import SiteModel from './models/SiteModel'
-import SceneModel from './models/SceneModel'
-import TerminalModel from './models/TerminalModel'
+import BaseController from '@/controllers/BaseController'
+import { AddressModel, ErrorModel, PerformanceModel, ScreenModel, SiteModel, SceneModel, TerminalModel } from './models'
 import Config from '../../../config'
 
 

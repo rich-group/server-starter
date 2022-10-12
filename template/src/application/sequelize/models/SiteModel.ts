@@ -1,13 +1,12 @@
 import { Table, Column, Comment, HasMany, AllowNull } from 'sequelize-typescript'
 import BaseModel from '../BaseModel';
-import PerformanceModel from './PerformanceModel';
-import SceneModel from './SceneModel';
-import AddressModel from './AddressModel'
+import { PerformanceModel } from './PerformanceModel';
+import { AddressModel } from './AddressModel'
 
 @Table({
   modelName: 'site'
 })
-export default class SiteModel extends BaseModel {
+export class SiteModel extends BaseModel {
   @AllowNull(false)
   @Comment('域名')
   @Column

@@ -1,12 +1,12 @@
 import BaseModel from "../BaseModel";
 import { Table, Column, Comment, AllowNull, HasMany } from 'sequelize-typescript'
-import PerformanceModel from "./PerformanceModel";
-import AddressModel from "./AddressModel";
+import { PerformanceModel } from "./PerformanceModel";
+import { AddressModel } from "./AddressModel";
 
 @Table({
   modelName: 'terminal'
 })
-export default class TerminalModel extends BaseModel {
+export class TerminalModel extends BaseModel {
 
   @AllowNull(false)
   @Comment('终端名称')

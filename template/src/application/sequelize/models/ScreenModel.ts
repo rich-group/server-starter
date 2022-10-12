@@ -4,7 +4,7 @@ import BaseModel from '../BaseModel';
 @Table({
   modelName: 'screenshot'
 })
-export default class ScreenModel extends BaseModel {
+export class ScreenModel extends BaseModel {
   @Comment('图片')
   @Column
   data?: String;

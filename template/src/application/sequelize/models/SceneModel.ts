@@ -1,12 +1,12 @@
 import { Column, Table, Comment, HasMany, AllowNull, ForeignKey, BelongsTo } from "sequelize-typescript";
-import PerformanceModel from "./PerformanceModel";
+import { PerformanceModel } from "./PerformanceModel";
 import BaseModel from "../BaseModel";
-import AddressModel from "./AddressModel";
+import { AddressModel } from "./AddressModel";
 
 @Table({
   modelName: 'scene'
 })
-export default class SceneModel extends BaseModel {
+export class SceneModel extends BaseModel {
 
   @AllowNull(false)
   @Comment('场景名称')

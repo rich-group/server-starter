@@ -1,14 +1,14 @@
 import { Column, Table, AllowNull, Comment, ForeignKey, BelongsTo, HasOne, HasMany } from 'sequelize-typescript'
-import SiteModel from './SiteModel';
+import { SiteModel } from './SiteModel';
 import BaseModel from '../BaseModel';
-import SceneModel from './SceneModel';
-import PerformanceModel from './PerformanceModel';
-import TerminalModel from './TerminalModel';
+import { SceneModel } from './SceneModel';
+import { PerformanceModel } from './PerformanceModel';
+import { TerminalModel } from './TerminalModel';
 
 @Table({
   modelName: 'address'
 })
-export default class AddressModel extends BaseModel {
+export class AddressModel extends BaseModel {
   @AllowNull(false)
   @Comment('测试地址')
   @Column

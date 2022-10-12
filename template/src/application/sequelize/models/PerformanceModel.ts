@@ -1,14 +1,14 @@
 import { Table, Column, Comment, ForeignKey, BelongsTo, AllowNull, DataType } from 'sequelize-typescript'
 import BaseModel from '../BaseModel'
-import AddressModel from './AddressModel';
-import SceneModel from './SceneModel';
-import SiteModel from './SiteModel'
-import TerminalModel from './TerminalModel';
+import { AddressModel } from './AddressModel';
+import { SceneModel } from './SceneModel';
+import { SiteModel } from './SiteModel'
+import { TerminalModel } from './TerminalModel';
 
 @Table({
   modelName: 'performance'
 })
-export default class PerformanceModel extends BaseModel {
+export class PerformanceModel extends BaseModel {
 
   @Comment('页面加载完成后的截屏')
   @Column
