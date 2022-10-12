@@ -1,4 +1,4 @@
-import BaseModel from '../application/sequelize/BaseModel'
+import BaseModel from '../application/sequelize/models/BaseModel'
 import { AddressModel as Address, UseModel, SceneModel, SiteModel, TerminalModel } from '../application'
 
 export class AddressModel extends Address {

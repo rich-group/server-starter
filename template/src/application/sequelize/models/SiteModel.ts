@@ -1,5 +1,5 @@
 import { Table, Column, Comment, HasMany, AllowNull } from 'sequelize-typescript'
-import BaseModel from '../BaseModel';
+import BaseModel from './BaseModel';
 import { PerformanceModel } from './PerformanceModel';
 import { AddressModel } from './AddressModel'
 
