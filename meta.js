@@ -67,8 +67,8 @@ module.exports = {
     }
   },
   filters: {
-    'src/infrastucture/server/expres.ts': "server === 'express'",
     'src/infrastucture/server/koa.ts': "server === 'koa'",
+    'src/infrastucture/server/expres.ts': "server === 'express'",
     'src/application/sequelize/**/*.ts': "orm === 'sequelize'",
     'src/application/typeorm/**/*.ts': "orm === 'typeorm'"
   },
