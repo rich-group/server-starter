@@ -1,10 +1,7 @@
-import { PerformanceController, SiteController, TerminalController, AddressController, SceneController } from './controllers'
+import * as controllers from './controllers'
 
-export default {
-  PerformanceController: new PerformanceController(),
-  SiteController: new SiteController(),
-  TerminalController: new TerminalController(),
-  SceneController: new SceneController(),
-  AddressController: new AddressController()
+function instantiateController () {
+  return Object.keys(controllers).reduce((instances, name) => 
+    Object.assign(instances, {[name]: new controllers[name]()}), {})
 }
-
+export default instantiateController()
