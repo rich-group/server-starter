@@ -1,5 +1,4 @@
 import { Sequelize } from 'sequelize-typescript'
-import BaseController from '@/controllers/BaseController'
 import { AddressModel, ErrorModel, PerformanceModel, ScreenModel, SiteModel, SceneModel, TerminalModel } from './models'
 import Config from '../../../config'
 
@@ -18,7 +17,6 @@ new Sequelize({
 })
 
 export {
-  BaseController,
   AddressModel,
   ErrorModel,
   PerformanceModel,

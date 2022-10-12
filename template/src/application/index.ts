@@ -1,5 +1,4 @@
 export { 
-  BaseController,
   AddressModel,
   ErrorModel,
   PerformanceModel,
