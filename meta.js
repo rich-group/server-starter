@@ -64,7 +64,35 @@ module.exports = {
         'sequelize',
         'typeorm'
       ],
-    }
+    },
+    autoInstall: {
+      when: 'isNotTest',
+      type: 'list',
+      message:
+        'Should we run `npm install` for you after the project has been created? (recommended)',
+      choices: [
+        {
+          name: 'Yes, use NPM',
+          value: 'npm',
+          short: 'npm',
+        },
+        {
+          name: 'Yes, use Yarn',
+          value: 'yarn',
+          short: 'yarn',
+        },
+        {
+          name: 'Yes, use Pnpm',
+          value: 'pnpm',
+          short: 'pnpm',
+        },
+        {
+          name: 'No, I will handle that myself',
+          value: false,
+          short: 'no',
+        },
+      ],
+    },
   },
   filters: {
     'src/infrastucture/server/koa.ts': "server === 'koa'",
