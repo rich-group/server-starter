@@ -11,7 +11,7 @@ new Sequelize({
   dialect: ENV.dialect,
   username: ENV.username,
   password: ENV.password,
-  models:[__dirname + '/models/*.[tj]s'],
+  models:[__dirname + '/models/!(index).ts'],
   timezone: '+08:00' //东八时区
 }).sync({
   force: false
