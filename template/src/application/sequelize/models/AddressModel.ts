@@ -1,4 +1,4 @@
-import { Column, Table, AllowNull, Comment, ForeignKey, BelongsTo, HasOne, HasMany } from 'sequelize-typescript'
+import { Column, Table, AllowNull, Comment, ForeignKey, BelongsTo, HasMany } from 'sequelize-typescript'
 import { SiteModel } from './SiteModel';
 import { BaseModel } from './BaseModel';
 import { SceneModel } from './SceneModel';

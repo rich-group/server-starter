@@ -1,4 +1,4 @@
-import { Column, Table, Comment, HasMany, AllowNull, ForeignKey, BelongsTo } from "sequelize-typescript";
+import { Column, Table, Comment, HasMany, AllowNull } from "sequelize-typescript";
 import { PerformanceModel } from "./PerformanceModel";
 import { BaseModel } from "./BaseModel";
 import { AddressModel } from "./AddressModel";
