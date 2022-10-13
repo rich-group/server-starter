@@ -1,7 +1,7 @@
 import express, { NextFunction, Request, Response } from 'express'
 import cors from 'cors'
-import register from '@/router';
-import controllers from '@/ioc';
+import register from '@/utils/router';
+import controllers from '@/utils/ioc';
 
 export type Param = 'params' | 'query' | 'body' | 'headers' | 'cookies';
 export type Parse = 'number' | 'string' | 'boolean';

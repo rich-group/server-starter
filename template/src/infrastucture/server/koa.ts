@@ -1,7 +1,7 @@
 import Koa from 'koa';
 import koaBody from 'koa-body';
-import register from '../../router';
-import controllers from '../../ioc';
+import register from '../../utils/router';
+import controllers from '../../utils/ioc';
 import Router from '@koa/router'
 import cors from '@koa/cors'
 import { Context } from 'koa'
