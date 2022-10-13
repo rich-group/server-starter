@@ -1,4 +1,4 @@
-import * as controllers from './controllers'
+import * as controllers from '@/controllers'
 
 function instantiateController () {
   return Object.keys(controllers).reduce((instances, name) => 
