@@ -1,7 +1,5 @@
 import { Sequelize } from 'sequelize-typescript'
-import { AddressModel, ErrorModel, PerformanceModel, ScreenModel, SiteModel, SceneModel, TerminalModel } from './models'
 import Config from '../../../config'
-
 
 const ENV = Config[process.env.ENV]
 
@@ -10,18 +8,18 @@ new Sequelize({
   dialect: ENV.dialect,
   username: ENV.username,
   password: ENV.password,
-  models:[__dirname + '/models/!(index).ts'],
+  models:[__dirname + '/models/!(index|BaseModel).ts'],
   timezone: '+08:00' //东八时区
 }).sync({
   force: false
 })
 
-export {
-  AddressModel,
-  ErrorModel,
-  PerformanceModel,
-  ScreenModel,
-  SiteModel,
-  SceneModel,
-  TerminalModel
-}
+export { 
+  AddressModel, 
+  ErrorModel, 
+  PerformanceModel, 
+  ScreenModel, 
+  SiteModel, 
+  SceneModel, 
+  TerminalModel 
+} from './models'
