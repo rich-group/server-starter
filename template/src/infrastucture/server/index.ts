@@ -1,9 +1,9 @@
 export enum ServerType {
-  {{#if_eq server 'express'}}express = 'express'{{else}}koa = 'koa'{{/if_eq}}
+  {{server}} = '{{server}}'
 }
 
 export enum OrmType {
-  {{#if_eq orm 'sequelize'}}sequelize = 'sequelize'{{else}}typeorm = 'typeorm'{{/if_eq}}
+  {{orm}} = '{{orm}}'
 }
 
 /**
