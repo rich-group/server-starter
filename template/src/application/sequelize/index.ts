@@ -14,12 +14,3 @@ new Sequelize({
   force: false
 })
 
-export { 
-  AddressModel, 
-  ErrorModel, 
-  PerformanceModel, 
-  ScreenModel, 
-  SiteModel, 
-  SceneModel, 
-  TerminalModel 
-} from './models'

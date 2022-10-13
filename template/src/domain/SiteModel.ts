@@ -1,7 +1,5 @@
-import { Sequelize } from 'sequelize-typescript'
-import { Fn } from 'sequelize/types/utils'
-import { AddressModel, SiteModel as Site, UseModel } from '../application'
-export default class SiteModel extends Site {
+import { AddressModel, SiteModel as Site, UseModel } from '@/application/sequelize/models'
+export class SiteModel extends Site {
   static add (entities: UseModel<Site>[]) {
     return this.bulkCreate(entities)
   }

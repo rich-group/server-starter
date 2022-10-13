@@ -1,5 +1,5 @@
 import { Table, Column, Comment, ForeignKey, BelongsTo, AllowNull, DataType } from 'sequelize-typescript'
-import BaseModel from './BaseModel'
+import { BaseModel } from './BaseModel'
 import { AddressModel } from './AddressModel';
 import { SceneModel } from './SceneModel';
 import { SiteModel } from './SiteModel'

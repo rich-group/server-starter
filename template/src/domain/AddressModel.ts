@@ -1,5 +1,4 @@
-import BaseModel from '../application/sequelize/models/BaseModel'
-import { AddressModel as Address, UseModel, SceneModel, SiteModel, TerminalModel } from '../application'
+import { BaseModel, AddressModel as Address, UseModel, SceneModel, SiteModel, TerminalModel } from '@/application/sequelize/models'
 
 export class AddressModel extends Address {
   /**

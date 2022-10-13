@@ -1,5 +1,5 @@
 import { Table, Column, Comment } from 'sequelize-typescript'
-import BaseModel from './BaseModel';
+import { BaseModel } from './BaseModel';
 
 @Table({
   modelName: 'screenshot'

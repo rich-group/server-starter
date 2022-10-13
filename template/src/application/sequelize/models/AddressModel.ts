@@ -1,6 +1,6 @@
 import { Column, Table, AllowNull, Comment, ForeignKey, BelongsTo, HasOne, HasMany } from 'sequelize-typescript'
 import { SiteModel } from './SiteModel';
-import BaseModel from './BaseModel';
+import { BaseModel } from './BaseModel';
 import { SceneModel } from './SceneModel';
 import { PerformanceModel } from './PerformanceModel';
 import { TerminalModel } from './TerminalModel';

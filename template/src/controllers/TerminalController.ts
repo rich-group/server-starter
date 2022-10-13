@@ -1,10 +1,10 @@
-import BaseController from "./BaseController";
+import { BaseController } from "./BaseController";
 import { Controller, Get } from '@/middleware/request'
 import { ResultStatus } from "@/utils/ResultStatus";
 import { TerminalModel } from "@/domain";
 
 @Controller('/terminal')
-export default class TerminalController extends BaseController {
+export class TerminalController extends BaseController {
   @Get('/')
   async queryList () {
     const res = await TerminalModel.all()

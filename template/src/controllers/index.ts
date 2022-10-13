@@ -1,13 +1,5 @@
-import PerformanceController from "./PerformanceController";
-import SiteController from "./SiteController";
-import TerminalController from "./TerminalController";
-import SceneController from "./SceneController";
-import AddressController from "./AddressController";
-
-export {
-  PerformanceController,
-  SiteController,
-  TerminalController,
-  SceneController,
-  AddressController
-}
+export { PerformanceController } from "./PerformanceController";
+export { SiteController } from "./SiteController";
+export { TerminalController } from "./TerminalController";
+export { SceneController } from "./SceneController";
+export { AddressController } from "./AddressController";

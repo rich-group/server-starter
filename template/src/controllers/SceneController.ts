@@ -1,10 +1,10 @@
-import BaseController from "./BaseController";
+import { BaseController } from "./BaseController";
 import { ResultStatus } from '@/utils/ResultStatus'
 import { Controller, Get, Query } from '@/middleware/request'
 import { SceneModel } from '@/domain'
 
 @Controller('/scene')
-export default class SceneController extends BaseController {
+export class SceneController extends BaseController {
   @Get('/')
   async queryList () {
     const res = await SceneModel.all()

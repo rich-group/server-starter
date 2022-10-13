@@ -1,6 +1,6 @@
 import { Result, ResultStatus, ResultMessage } from '@/utils/ResultStatus'
 
-export default class BaseController {
+export class BaseController {
   JsonBackResult(status: ResultStatus): Result;
   JsonBackResult(status: ResultStatus, data: any): Result
   JsonBackResult(status: ResultStatus, data: any, message: string): Result

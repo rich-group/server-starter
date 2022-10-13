@@ -1,4 +1,4 @@
-import BaseModel from "./BaseModel";
+import { BaseModel } from "./BaseModel";
 import { Table, Column, Comment, AllowNull, HasMany } from 'sequelize-typescript'
 import { PerformanceModel } from "./PerformanceModel";
 import { AddressModel } from "./AddressModel";

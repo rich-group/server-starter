@@ -1,11 +1,11 @@
-import BaseController from "./BaseController";
+import { BaseController } from "./BaseController";
 import { Controller, Get, Query } from "@/middleware/request";
 import { PerformanceModel } from "@/domain";
 import { ResultStatus } from "@/utils/ResultStatus";
 import { Op } from "sequelize";
 
 @Controller('/performance')
-export default class PerformanceController extends BaseController {
+export class PerformanceController extends BaseController {
   // 查询所有地址信息
   @Get('/')
   async queryAllList (

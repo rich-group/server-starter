@@ -1,11 +1,11 @@
-import BaseController from "./BaseController";
+import { BaseController } from "./BaseController";
 import { AddressModel } from '@/domain'
 import { ResultStatus } from "@/utils/ResultStatus";
 import { Controller, Get, Query, Post, Body, Delete } from '@/middleware/request'
-import { SiteModel, SceneModel } from '@/application'
+import { SiteModel, SceneModel } from '@/application/sequelize/models'
 
 @Controller('/address')
-export default class AddressController extends BaseController {
+export class AddressController extends BaseController {
   // 查询所有地址信息
   @Get('/')
   async queryAllList () {

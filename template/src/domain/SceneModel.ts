@@ -1,6 +1,5 @@
-import { CreationAttributes } from 'sequelize/types'
-import { SceneModel as Scene, UseModel } from '../application'
-export default class SiteModel extends Scene {
+import { SceneModel as Scene, UseModel } from '@/application/sequelize/models'
+export class SceneModel extends Scene {
   static add (entities: UseModel<Scene>[]) {
     return this.bulkCreate(entities)
   }

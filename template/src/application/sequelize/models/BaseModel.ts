@@ -4,7 +4,7 @@ import { Comment, Column, Model, PrimaryKey, DataType, Table, AutoIncrement, Def
   createdAt: false,
   updatedAt: false
 })
-export default class BaseModel extends Model {
+export class BaseModel extends Model {
   @PrimaryKey
   @AutoIncrement
   @Comment('主键')

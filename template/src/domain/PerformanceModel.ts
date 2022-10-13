@@ -1,6 +1,6 @@
-import { PerformanceModel as Performance, SiteModel, SceneModel, TerminalModel, AddressModel, UseModel } from '../application'
+import { PerformanceModel as Performance, SiteModel, SceneModel, TerminalModel, AddressModel, UseModel } from '@/application/sequelize/models'
 
-export default class PerformanceModel extends Performance {
+export class PerformanceModel extends Performance {
 
   /**
  * @description 添加单个实体

@@ -1,10 +1,10 @@
-import BaseController from "./BaseController";
+import { BaseController } from "./BaseController";
 import { Controller, Get, Query } from "@/middleware/request";
 import { SiteModel } from '@/domain'
 import { ResultStatus } from "@/utils/ResultStatus";
 
 @Controller('/site')
-export default class SiteController extends BaseController {
+export class SiteController extends BaseController {
   @Get('/init')
   async init () {
     const res = await SiteModel.add([])
