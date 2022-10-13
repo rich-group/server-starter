@@ -9,5 +9,8 @@ export enum ServerType {
  * @returns 
  */
 export const createServer = (port: number, type: ServerType) => {
-  return import(`./${type}`).then(module => module.default.listen(port))
-}
+  return import(`./${type}`).then(module => {
+    module.default.listen(port)
+    import('@/application')
+  })
+};
