@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "dev": [
+      "node",
+      "bin/www",
+      ["请选择环境", ["dev", "sit", "pre", "prd"]]
+    ],
+    "build": [
+      "tsc",
+      "-p",
+      "tsconfig.json"
+    ],
+    "start": [
+      "pm2",
+      "start",
+      "ecosystem.config.js",
+      "--env",
+      ["请选择环境", ["dev", "sit", "pre", "prd"]]
+    ]
+  }
+}

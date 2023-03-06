@@ -3,7 +3,7 @@
 const { apps } = require('../ecosystem.config.js')
 const shell = require('shelljs')
 const app = apps[0]
-const env = process.env.npm_config_env
+const env = process.argv[2]
 const MODE_ENV = Object.keys(app)
   .reduce((obj, key) => /env_.+/.test(key) 
     ? Object.assign(obj, {[key]: app[key]}) 
