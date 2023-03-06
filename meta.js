@@ -96,9 +96,12 @@ module.exports = {
   },
   filters: {
     'src/infrastucture/server/koa.ts': "server === 'koa'",
-    'src/infrastucture/server/expres.ts': "server === 'express'",
+    'src/infrastucture/server/express.ts': "server === 'express'",
     'src/application/sequelize/**/*.ts': "orm === 'sequelize'",
-    'src/application/typeorm/**/*.ts': "orm === 'typeorm'"
+    'src/application/typeorm/**/*.ts': "orm === 'typeorm'",
+    'pnpm-lock.yaml': 'autoInstall === "pnpm"',
+    'package-lock.json': 'autoInstall === "npm"',
+    'yarn.lock': 'autoInstall === "yarn"'
   },
   complete: function(data, { chalk }) {
     const green = chalk.green
