@@ -4,6 +4,8 @@ import Config from '../../../config'
 const ENV = Config[process.env.ENV]
 
 new Sequelize({
+  host: ENV.host,
+  port: ENV.port,
   database: ENV.database,
   dialect: ENV.dialect,
   username: ENV.username,

@@ -1,13 +1,16 @@
 import { DataSource } from "typeorm"
-import { UserModel } from "./models/UserModel"
+import { UserModel } from "./models"
+import Config from '../../../config'
+
+const ENV = Config[process.env.ENV]
 
 export const AppDataSource = new DataSource({
     type: "mysql",
-    host: "localhost",
-    port: 3306,
-    username: "test",
-    password: "test",
-    database: "test",
+    host: ENV.host,
+    port: ENV.port,
+    username: ENV.username,
+    password: ENV.password,
+    database: ENV.database,
     synchronize: true,
     logging: false,
     entities: [UserModel],

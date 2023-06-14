@@ -1,4 +1,4 @@
-import { BaseController } from "./BaseController";
+import { BaseController } from "../application/sequelize/BaseController";
 import { AddressModel } from '@/domain'
 import { ResultStatus } from "@/utils/ResultStatus";
 import { Controller, Get, Query, Post, Body, Delete } from '@/middleware/request'

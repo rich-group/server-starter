@@ -1,7 +1,5 @@
-import { Table, Column, Comment, HasMany, AllowNull } from 'sequelize-typescript'
+import { Table, Column, Comment, AllowNull } from 'sequelize-typescript'
 import { BaseModel } from './BaseModel';
-import { PerformanceModel } from './PerformanceModel';
-import { AddressModel } from './AddressModel'
 
 @Table({
   modelName: 'site'
@@ -20,12 +18,4 @@ export class SiteModel extends BaseModel {
   @AllowNull(false)
   @Column
   declare siteId: Number;
-
-  // 站点对应多个性能
-  @HasMany(() => PerformanceModel)
-  declare performances?: PerformanceModel[]
-
-  // 站点对应多个场景
-  @HasMany(() => AddressModel)
-  declare addresses?: AddressModel[]
 }

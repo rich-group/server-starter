@@ -1,5 +1,22 @@
-import { AppDataSource } from "./data-source"
-import { UserModel } from "./models/UserModel"
+import { DataSource } from "typeorm"
+import { UserModel } from "./models"
+import Config from '../../../config'
+
+const ENV = Config[process.env.ENV]
+
+const AppDataSource = new DataSource({
+    type: "mysql",
+    host: ENV.host,
+    port: ENV.port,
+    username: ENV.username,
+    password: ENV.password,
+    database: ENV.database,
+    synchronize: true,
+    logging: false,
+    entities: [UserModel],
+    migrations: [],
+    subscribers: [],
+})
 
 AppDataSource.initialize().then(async () => {
 
