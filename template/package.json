@@ -4,7 +4,6 @@
   "description": "{{ description }}",
   "author": "{{ author }}",
   "main": "./src/index.ts",
-  "exports": "./dist/index.js",
   "_moduleAliases": {
     "@": "src"
   },

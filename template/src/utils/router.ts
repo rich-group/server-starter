@@ -2,6 +2,7 @@ import {
   CONTROLLER_METADATA,
   ROUTE_METADATA,
 } from '@/middleware/request';
+import 'reflect-metadata';
 import { RouteType } from '@/utils/route';
 export const PARAM_METADATA = 'param';
 export const PARSE_METADATA = 'parse';
